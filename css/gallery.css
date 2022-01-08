@@ -1,0 +1,515 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {
+    font-family: 'Source_Sans_Pro';
+    src: url("../Fonts/fonting/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+body {
+    background-color: rgb(129, 129, 129);
+    font-family: 'Source_Sans_Pro', sans-serif;
+}
+body a{
+    text-decoration: none;
+}
+.navBar{
+    z-index: 500;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    height: 120px;
+    width: 100%;
+    top:0;
+    position: fixed;
+    transition: all .2s ease-in-out;
+}
+
+.navLinks{
+    display: flex;
+    left: 150px;
+    list-style: none;
+    padding: 20px 0px 20px 20px;
+    margin-right: 10px;
+}
+.navLinks a{
+    text-decoration: none;
+    color: rgb(226,226,226);
+    padding: 65px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.navLinks a:hover{
+    font-weight: bolder;
+}
+.stickie{
+    background: hsl(0, 0% 100%/ 0.5);
+    backdrop-filter: blur(3rem);
+}
+
+.log{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 30px;
+    color: rgb(226,226,226);
+}
+.mobileMenu{
+    display: none;
+}
+
+.join{
+    position: fixed;
+    background: #F29F05;
+    width: 170px;
+    height: 170px;
+    line-height: 45px;
+    bottom: 10%;
+    right: 5%;
+    border-radius: 50%;
+    text-align: center;
+    transform: translateX(150%);
+    transition: .8s;
+}
+.join p{
+    color: rgb(226,226,226);
+    font-weight: bold;
+    padding-top: 35%;
+    font-size: 33px;
+}
+.join {
+    animation: bounce 2s ease 2;
+    animation-delay: 3s;
+}
+
+@media(max-width:700px){
+    .title{
+        transform: translateX(0%);
+        transition: transform 0.7s ease-in;
+    }
+    .title[aria-deleted="true"]{
+        transform: translateX(-100%);
+        transition: transform 1s ease;
+    }
+}
+@media (max-width: 700px){
+    .stickie{
+        background: none;
+        backdrop-filter: none;
+    }
+    .navLinks{
+        position: fixed;
+        inset: 0 0 0 35%;
+        z-index: 1000;
+        gap: 30px;
+
+        flex-direction: column;
+        padding: 120px 20px;
+
+        backdrop-filter: blur(1rem);
+
+        transform: translateX(110%);
+        transition: transform .5s ease-in;
+    }
+    .navLinks[data-visible="true"]{
+        transform: translateX(10%);
+    }
+    .mobileMenu[aria-expanded="true"]{
+        background: url("../Images/menuClose.png");
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+    .mobileMenu{
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        cursor: pointer;
+        background: url("../Images/icons8-menu.svg");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        border: 0;
+        width: 45px;
+        aspect-ratio: 1;
+        top: 40px;
+        right: 20px;
+    }    
+    .onScrollLine1{
+        width: 70%;
+    } 
+    .join{
+        width: 100px;
+        height: 100px;
+        bottom: 10%;
+        right: 3%;
+    }
+    .join p{
+        padding-top: 25%;
+        font-size: 22px;
+    } 
+}
+@media (min-width:700px) and (max-width:800px){
+    .navLinks{
+        padding: 15px;
+    }
+    .navLinks a{
+        padding: 10px;
+    }
+    .onScrollLine1{
+        width: 70%;
+    } 
+    .join{
+        width: 140px;
+        height: 140px;
+        bottom: 10%;
+        right: 3%;
+    }
+    .join p{
+        padding-top: 32%;
+        font-size: 28px;
+    }
+}
+@media (min-width:800px) and (max-width:900px){
+    .navLinks{
+        padding: 17px;
+    }
+    .navLinks a{
+        padding: 20px;
+    }
+    .title{
+        font-size: 14px;
+    }
+    .join{
+        width: 140px;
+        height: 140px;
+        bottom: 10%;
+        right: 3%;
+    }
+    .join p{
+        padding-top: 32%;
+        font-size: 28px;
+    }
+}
+@media (min-width:900px) and (max-width:1100px){
+    .navLinks{
+        padding: 20px;
+    }
+    .navLinks a{
+        padding: 30px;
+    }
+}
+@media (min-width:1100px) and (max-width:1300px){
+    .navLinks{
+        padding: 20px;
+    }
+    .navLinks a{
+        padding: 45px;
+    }
+}
+.footer{
+    background-color: rgb(44, 44, 44);
+}
+footer .copyright{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.copyright{
+    background-color: rgb(24, 24, 24);
+    color: rgb(226,226,226);
+}
+.copyright img{
+    width: 13px;
+    height: 13px;
+}
+footer .social .social-items img{
+    width: 33px;
+    height: 33px;
+}
+footer .social ul{
+    display: flex;
+    list-style: none;
+    justify-content:center;
+    align-items:center;
+    padding-top: 40px;
+}
+footer .social ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer .quick-links ul{
+    display: flex;
+    list-style: none;
+    justify-content:center;
+    align-items:center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+footer .quick-links ul li a{
+    text-decoration: none;
+    color: rgb(226,226,226);
+}
+footer .quick-links ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+footer .quick-links ul span {
+    color:rgb(226,226,226);
+}
+
+.wraper-gallery{
+    
+    margin: 0 15vw;
+}
+#index-gallery{
+    margin-top: 140px;
+    margin-bottom: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px; 
+    grid-template-areas: 
+    "gallery-h1 gallery-h1 gallery-h1"
+    "gallery-p gallery-p gallery-p"
+    "img1 img2 img3"
+    "img4 img5 img6"
+    "img7 img8 img9"
+    "img10 img11 img12";
+}
+#index-gallery .gallery-img{
+    width: 100%;
+    height: 300px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+#index-gallery h1{
+    grid-area: gallery-h1;
+    font-size: 55px;
+}
+#index-gallery p{
+    font-size: 20px;
+    grid-area: gallery-p;
+}
+#index-gallery .img1{
+    grid-area: img1;
+    background-image: url("../Images/GALLERY1.webp");    
+    content: "SLIKA JEDAN";
+}
+#index-gallery .img2{
+    grid-area: img2;
+    background-image: url("../Images/GALLERY2.webp");    
+    content: "Greece experienced the worst forest fires the country had seen since 2007, after record-breaking temperatures and strong winds caused fires to destroy homes and crops, killing three.";
+}
+#index-gallery .img3{
+    grid-area: img3;
+    background-image: url("../Images/GALLERY3.webp");    
+    content: "SLIKA TRI";
+}
+#index-gallery .img4{
+    grid-area: img4;
+    background-image: url("../Images/GALLERY4.webp");    
+}
+#index-gallery .img5{
+    grid-area: img5;
+    background-image: url("../Images/GALLERY5.webp");    
+}
+#index-gallery .img6{
+    grid-area: img6;
+    background-image: url("../Images/GALLERY6.webp");    
+}
+#index-gallery .img7{
+    grid-area: img7;
+    background-image: url("../Images/GALLERY7.webp");    
+}
+#index-gallery .img8{
+    grid-area: img8;
+    background-image: url("../Images/GALLERY8.webp");    
+}
+#index-gallery .img9{
+    grid-area: img9;
+    background-image: url("../Images/GALLERY9.webp");    
+}
+#index-gallery .img10{
+    grid-area: img10;
+    background-image: url("../Images/GALLERY10.webp");    
+}
+#index-gallery .img11{
+    grid-area: img11;
+    background-image: url("../Images/GALLERY11.webp");    
+}
+#index-gallery .img12{
+    grid-area: img12;
+    background-image: url("../Images/GALLERY12.webp");    
+}
+
+.gallery-img div{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-img div:hover{
+    opacity: 0.7;
+    transition: all ease-in-out 300ms;
+}
+.gallery-img a{
+    font-size: 18px;
+    color: rgb(226,226,226);
+    text-decoration: none;
+}
+
+.img-window{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.img-window img {
+    max-width: 80vw;
+    max-height: 80vw;
+}
+
+.img-btn-next{
+    right: 230px;
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    position: fixed;
+    z-index: 1100;
+    top: 48vh;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.img-btn-next:hover{
+    opacity: 0.8;
+}
+.img-btn-prev{
+    left: 240px;
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    position: fixed;
+    z-index: 1100;
+    top: 48vh;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.img-btn-prev:hover{
+    opacity: 0.8;
+}
+
+figure figcaption{
+    color: white;
+    font-size: 20px;
+    bottom: 20px;
+    z-index: 1200;
+    position: absolute;
+}
+@media(max-width: 700px){
+    .img-btn-next{
+        right: 5px;
+        font-size: 20px;
+    }
+    .img-btn-prev{
+        left: 10px;
+        font-size: 20px;
+    }
+    #index-gallery{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 10px; 
+        grid-template-areas: 
+        "gallery-h1 gallery-h1"
+        "gallery-p gallery-p"
+        "img1 img2"
+        "img3 img4"
+        "img5 img6"
+        "img7 img8"
+        "img9 img10"
+        "img11 img12";
+    }
+    #index-gallery h1{
+        font-size: 40px;
+    }
+    #index-gallery p{
+        font-size: 15px;
+    }
+    #index-gallery .gallery-img{
+        height: 150px;
+    }
+}
+@media (min-width: 700px) and (max-width: 800px){
+    .img-btn-next{
+        right: 10px;
+        font-size: 20px;
+    }
+    .img-btn-prev{
+        left: 13px;
+        font-size: 20px;
+    }
+    #index-gallery{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 10px; 
+        grid-template-areas: 
+        "gallery-h1 gallery-h1"
+        "gallery-p gallery-p"
+        "img1 img2"
+        "img3 img4"
+        "img5 img6"
+        "img7 img8"
+        "img9 img10"
+        "img11 img12";
+    }
+    #index-gallery h1{
+        font-size: 40px;
+    }
+    #index-gallery p{
+        font-size: 15px;
+    }
+    #index-gallery .gallery-img{
+        height: 200px;
+    }
+}
+@media (min-width: 800px) and (max-width: 1200px){
+    .img-btn-next{
+        right: 30px;
+    }
+    .img-btn-prev{
+        left: 35px;
+    }
+    #index-gallery .gallery-img{
+        height: 200px;
+    }
+}
+@media (min-width: 1200px) and (max-width:1350px){
+    .img-btn-next{
+        right: 100px;
+    }
+    .img-btn-prev{
+        left: 100px;
+    }
+}
+@media (min-width:1350px) and (max-width:1450px){
+    .img-btn-next{
+        right: 150px;
+    }
+    .img-btn-prev{
+        left: 160px;
+    }
+}

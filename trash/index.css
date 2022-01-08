@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /*You do not want there to be any margin or padding space around an element you will want to define that there is no margin or padding.*/
+}
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+}
+.container{  
+    height: 100%;/*Viewport height. Viewport units are calculated as a percentage of the browser’s current viewport size. 
+    Percentage units on the other hand are calculated as a percentage of the parent element, which may be different than the viewport size.*/
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../Images/pozadina1.jfif);
+    background-position: center; /* Background image is centered vertically and horizontally at all times */
+    background-repeat: no-repeat;/* Background image doesn’t tile */
+    background-attachment: fixed;
+    background-size: cover;
+}
+nav {
+    display: flex; /*A flex container expands items to fill available free space or shrinks them to prevent overflow.*/
+    justify-content: space-around; /*defines how the browser distributes space between and around content items along the main-axis of a flex container*/
+    align-items: center;
+    min-height: 12vh;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    /*background-color: rgb(190, 102, 102);*/
+    width: 70%;
+}
+nav li{
+    list-style: none;
+}
+nav a{
+    color: rgb(226,226,226);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1.5vh;
+}
+nav ul li a:hover{
+    background-color: rgba(226,226,226,0.3);
+    border-radius: 1px;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 30px;
+    height: 2px;
+    background-color:rgb(226,226,226);
+    margin: 6px;
+}
+
+@media screen and (max-width: 768px){
+    .navLinks{
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top:10vh;
+        background-color: rgba(226,226,226,0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);  
+        transition: transform 0.5s ease-in;  
+    }
+    .burger{
+        display: block;
+        position: absolute;
+        right:0px;
+    }
+
+}
+
+.navActive{
+    transform: translateX(0%);
+}

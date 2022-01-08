@@ -1,0 +1,420 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {
+    font-family: 'Source_Sans_Pro';
+    src: url("../Fonts/fonting/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+html, body{
+    height: auto;
+    font-family: 'Source_Sans_Pro', sans-serif;
+    background-color: rgb(129, 129, 129);
+}
+.container{
+    height: 100vh;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../Images/nova1.jpg);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.navBar{
+    z-index: 1000;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    height: 120px;
+    width: 100%;
+    top:0;
+    position: fixed;
+    transition: all .2s ease-in-out;
+}
+.navLinks{
+    display: flex;
+    left: 150px;
+    list-style: none;
+    padding: 20px 0px 20px 20px;
+    margin-right: 10px;
+
+}
+.navLinks a{
+    text-decoration: none;
+    color: rgb(226,226,226);
+    padding: 65px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.navLinks a:hover{
+    font-weight: bolder;
+}
+.log{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 30px;
+    color: rgb(226,226,226);
+}
+.title{
+    color: rgb(226,226,226);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 25px;
+    font-weight: lighter;
+}
+.stickie{
+    background: hsl(0, 0% 100%/ 0.5);
+    backdrop-filter: blur(3rem);
+}
+section ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section ul li{
+    text-align: center;
+    margin: 50px;
+}
+body a{
+    text-decoration: none;
+}
+.mobileMenu{
+    display: none;
+}
+.line1{
+    height: 1px;
+    width:1%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(71, 71, 71);
+    transition: 1s;
+}
+.line1{
+    display: none;
+}
+.join{
+    position: fixed;
+    background: #F29F05;
+    width: 170px;
+    height: 170px;
+    line-height: 45px;
+    bottom: 10%;
+    right: 5%;
+    border-radius: 50%;
+    text-align: center;
+    transform: translateX(150%);
+    transition: .8s;
+}
+.join p{
+    color: rgb(226,226,226);
+    font-weight: bold;
+    padding-top: 35%;
+    font-size: 33px;
+}
+.join {
+    animation: bounce 2s ease 2;
+    animation-delay: 3s;
+}
+@keyframes bounce {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
+}
+@media(max-width:700px){
+    .title{
+        transform: translateX(0%);
+        transition: transform 0.7s ease-in;
+    }
+    .title[aria-deleted="true"]{
+        transform: translateX(-100%);
+        transition: transform 1s ease;
+    }
+}
+@media (max-width: 700px){
+    .stickie{
+        background: none;
+        backdrop-filter: none;
+    }
+    .navLinks{
+        position: fixed;
+        inset: 0 0 0 35%;
+        z-index: 1000;
+        gap: 30px;
+
+        flex-direction: column;
+        padding: 120px 20px;
+
+        backdrop-filter: blur(1rem);
+
+        transform: translateX(110%);
+        transition: transform .5s ease-in;
+    }
+    .navLinks[data-visible="true"]{
+        transform: translateX(10%);
+    }
+    .mobileMenu[aria-expanded="true"]{
+        background: url("../Images/menuClose.png");
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+    .mobileMenu{
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        cursor: pointer;
+        background: url("../Images/icons8-menu.svg");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        border: 0;
+        width: 45px;
+        aspect-ratio: 1;
+        top: 40px;
+        right: 20px;
+    }    
+    .log{
+        display: none;
+    }
+    .title{
+        font-size: 12px;
+    }
+    section ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .line1{
+        display: flex;
+    }
+    .onScrollLine1{
+        width: 70%;
+    } 
+    .join{
+        width: 100px;
+        height: 100px;
+        bottom: 10%;
+        right: 3%;
+    }
+    .join p{
+        padding-top: 25%;
+        font-size: 22px;
+    } 
+}
+@media (min-width:700px) and (max-width:800px){
+    .navLinks{
+        padding: 15px;
+    }
+    .navLinks a{
+        padding: 10px;
+    }
+    .title{
+        font-size: 14px;
+    }
+    section ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .line1{
+        display: flex;
+    }
+    .onScrollLine1{
+        width: 70%;
+    } 
+    .join{
+        width: 140px;
+        height: 140px;
+        bottom: 10%;
+        right: 3%;
+    }
+    .join p{
+        padding-top: 32%;
+        font-size: 28px;
+    }
+}
+@media (min-width:800px) and (max-width:900px){
+    .navLinks{
+        padding: 17px;
+    }
+    .navLinks a{
+        padding: 20px;
+    }
+    .title{
+        font-size: 14px;
+    }
+    .join{
+        width: 140px;
+        height: 140px;
+        bottom: 10%;
+        right: 3%;
+    }
+    .join p{
+        padding-top: 32%;
+        font-size: 28px;
+    }
+}
+@media (min-width:900px) and (max-width:1100px){
+    .navLinks{
+        padding: 20px;
+    }
+    .navLinks a{
+        padding: 30px;
+    }
+    .title{
+        font-size: 17px;
+    }
+}
+@media (min-width:1100px) and (max-width:1300px){
+    .navLinks{
+        padding: 20px;
+    }
+    .navLinks a{
+        padding: 45px;
+    }
+    .title{
+        font-size: 19px;
+    }
+}
+
+
+.tile {
+    height:350px;
+    width:300px;
+    background-color: rgb(209, 209, 209);
+    transform: translateY(50%);
+    transition-delay: 1s;
+    transition: 1s;
+    opacity: 0;
+    box-shadow: .75rem .75rem 1em rgb(95, 95, 95);
+}
+.inView {
+    opacity: 1;
+    transform: translateY(0);
+}
+section {
+    padding:20px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+.image1{
+    background-image: url("../Images/globalwarming1.jpg");
+}
+.image2{
+    background-image: url("../Images/globalwar2.jpg");
+    background-size: 110% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s ease-in;
+    height: 200px;
+    width: 300px;
+}
+.image3{
+    background-image: url("../Images/vrijeme1.jpg");
+}
+.image4{
+    background-image: url("../Images/co1.jpg");
+}
+.image5{
+    background-image: url("../Images/sea1.jpg");
+}
+.image6{
+    background-image: url("../Images/fix1.jpg");
+}
+.image1, .image3, .image4, .image5, .image6{
+    background-size: 100% 100%;
+    background-position: center;
+    transition: 1s ease-in;
+    height: 200px;
+    width: 300px;
+}
+.image1:hover, .image3:hover,.image4:hover,.image5:hover,.image6:hover{
+    background-size: 110% 110%;
+    background-position: center;
+}
+.image2:hover{
+    background-size: 120% 110%;
+    background-position: center;
+}
+.text{
+    color: rgb(44, 44, 44);
+    margin: auto;
+    padding: 20px; 
+}
+.text p{
+    margin-top: 10px;
+}
+
+.line{
+    height: 1px;
+    width:1%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(71, 71, 71);
+    transition: .7s;
+}
+.onScrollLine{
+    width: 70%;
+}
+
+.footer{
+    background-color: rgb(44, 44, 44);
+}
+footer .copyright{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.copyright{
+    background-color: rgb(24, 24, 24);
+    color: rgb(226,226,226);
+}
+.copyright img{
+    width: 13px;
+    height: 13px;
+}
+footer .social .social-items img{
+    width: 33px;
+    height: 33px;
+}
+footer .social ul{
+    display: flex;
+    list-style: none;
+    justify-content:center;
+    align-items:center;
+    padding-top: 40px;
+}
+footer .social ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+footer .quick-links ul{
+    display: flex;
+    list-style: none;
+    justify-content:center;
+    align-items:center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+footer .quick-links ul li a{
+    text-decoration: none;
+    color: rgb(226,226,226);
+}
+footer .quick-links ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+footer .quick-links ul span {
+    color:white;
+}

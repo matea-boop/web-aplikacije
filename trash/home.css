@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {
+    font-family: 'Source_Sans_Pro';
+    src: url("../Fonts/fonting/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    background-color: #9db5da;
+    font-family: 'Source_Sans_Pro', sans-serif;
+}
+
+.box1{
+    cursor: pointer;
+    margin-top: 150px;
+    margin-left: 200px;
+    width: 900px;
+    height: 200px;
+    display: flex;
+    background-color: #6b92cc;
+    box-shadow: .75rem .75rem 1em #2f4c77;
+}
+.image1{
+    background-image: url("../Images/globalwarming1.jpg");
+}
+.image1:hover, .image3:hover,.image4:hover,.image5:hover,.image6:hover{
+    background-size: 110% 110%;
+    background-position: center;
+}
+.image1, .image3, .image4, .image5, .image6{
+    background-size: 100% 100%;
+    background-position: center;
+    transition: 1s ease-in;
+    height: 200px;
+    width: 300px;
+}
+.text1{
+    color: rgb(226,226,226);
+    margin: auto;
+    padding: 20px; 
+}
+
+.box2{
+    cursor: pointer;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-right: 200px;
+    width: 900px;
+    height: 200px;
+    display: flex;
+    float: right;
+    background-color: #6b92cc;
+    box-shadow: .75rem .75rem 1em #2f4c77;
+}
+.image2{
+    background-image: url("../Images/globalwar2.jpg");
+    background-size: 110% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s ease-in;
+    height: 200px;
+    width: 300px;
+}
+.image2:hover{
+    background-size: 120% 110%;
+    background-position: center;
+}
+.text2, .text3, .text4, .text5, .text6{
+    color: rgb(226,226,226);
+    margin: auto;
+    margin-left: 20px;
+    padding: 20px; 
+}
+
+.box3{
+    cursor: pointer;
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-bottom: 150px;
+    width: 900px;
+    height: 200px;
+    display: flex;
+    background-color: #6b92cc;
+    box-shadow: .75rem .75rem 1em #2f4c77;
+}
+.image3{
+    background-image: url("../Images/extreme1.jpg");
+}
+
+.box4{
+    cursor: pointer;
+    margin-right: 200px;
+    margin-bottom: 150px;
+    width: 900px;
+    height: 200px;
+    display: flex;
+    float: right;
+    background-color: #6b92cc;
+    box-shadow: .75rem .75rem 1em #2f4c77;
+
+}
+.image4{
+    background-image: url("../Images/co1.jpg");
+}
+
+.box5{
+    cursor: pointer;
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-bottom: 150px;
+    width: 900px;
+    height: 200px;
+    display: flex;
+    background-color: #6b92cc;
+    box-shadow: .75rem .75rem 1em #2f4c77;
+}
+.image5{
+    background-image: url("../Images/sea1.jpg");
+}
+
+.box6{
+    cursor: pointer;
+    margin-right: 200px;
+    margin-bottom: 150px;
+    width: 900px;
+    height: 200px;
+    display: flex;
+    float: right;
+    background-color: #6b92cc;
+    box-shadow: .75rem .75rem 1em #2f4c77;
+}
+.image6{
+    background-image: url("../Images/fix1.jpg");
+}
