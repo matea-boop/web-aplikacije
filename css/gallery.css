@@ -296,7 +296,7 @@ footer .quick-links ul span {
 #index-gallery .img1{
     grid-area: img1;
     background-image: url("../Images/GALLERY1.webp");    
-    content: "SLIKA JEDAN";
+    content: "A woman leaves her home amid forest fires in Evia, Greece.";
 }
 #index-gallery .img2{
     grid-area: img2;
@@ -306,43 +306,52 @@ footer .quick-links ul span {
 #index-gallery .img3{
     grid-area: img3;
     background-image: url("../Images/GALLERY3.webp");    
-    content: "SLIKA TRI";
+    content: "A lack of rainfall in Turkey this year saw extreme droughts threaten the livelihoods of farmers across agricultural lands.";
 }
 #index-gallery .img4{
     grid-area: img4;
-    background-image: url("../Images/GALLERY4.webp");    
+    background-image: url("../Images/GALLERY4.webp");   
+    content: "This highly polluted river in Delhi became covered in a snow-like foam in November as a result of “heavy sewage and industrial waste”.";
 }
 #index-gallery .img5{
     grid-area: img5;
     background-image: url("../Images/GALLERY5.webp");    
+    content: "Heavy rains in January meant failing waste systems near the city of Priboj flooded Serbia’s rivers with waste.";
 }
 #index-gallery .img6{
     grid-area: img6;
-    background-image: url("../Images/GALLERY6.webp");    
+    background-image: url("../Images/GALLERY6.webp");  
+    content: "A prolonged drought in the north east of Kenya this December caused the death of livestock and threatened agricultural communities.";
 }
 #index-gallery .img7{
     grid-area: img7;
-    background-image: url("../Images/GALLERY7.webp");    
+    background-image: url("../Images/GALLERY7.webp"); 
+    content: "Rainfall and melting snow in the Eifel mountain region of western Germany and eastern Belgium destroyed thousands of homes and killed 200 people."; 
 }
 #index-gallery .img8{
     grid-area: img8;
-    background-image: url("../Images/GALLERY8.webp");    
+    background-image: url("../Images/GALLERY8.webp");   
+     content: "Climate disasters across the world as well as political unrest have forced the mass movement of people to more stable ground, often seeking asylum in Europe and facing increasingly hostile governments.";
 }
 #index-gallery .img9{
     grid-area: img9;
-    background-image: url("../Images/GALLERY9.webp");    
+    background-image: url("../Images/GALLERY9.webp");  
+    content: "In February, climate change caused extensive droughts which led to the drying up of lakes like Lake Suesca in Colombia.";
 }
 #index-gallery .img10{
     grid-area: img10;
-    background-image: url("../Images/GALLERY10.webp");    
+    background-image: url("../Images/GALLERY10.webp");
+    content: "Greece wasn’t the only place to be hit with extensive wildfires this year. In July and August, California faced another year of forest fires, burning 2,569,009 acres and killing three people.";
 }
 #index-gallery .img11{
     grid-area: img11;
-    background-image: url("../Images/GALLERY11.webp");    
+    background-image: url("../Images/GALLERY11.webp"); 
+    content: "In Louisiana and the Gulf Coast, Category 4 Hurricane Ida decimated homes in an area already heavily impacted by COVID.";
 }
 #index-gallery .img12{
     grid-area: img12;
-    background-image: url("../Images/GALLERY12.webp");    
+    background-image: url("../Images/GALLERY12.webp");   
+    content: "In July, a lagoon in the Patagonian province of Chubut, Argentina turned bright pink as a result of dumped chemical waste – specifically sodium sulfite, an antibacterial product used in the fishing industry.";
 }
 
 .gallery-img div{
